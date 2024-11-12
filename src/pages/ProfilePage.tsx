@@ -105,7 +105,7 @@ export default function ProfilePage() {
         <ExperiencesSection isEditing={isEditing} />
       </div>
       <div id="contactArea">
-        <ContactArea email={undefined} />
+        <ContactArea email={githubUser?.email || "undefined"} />
       </div>
     </>
   );
