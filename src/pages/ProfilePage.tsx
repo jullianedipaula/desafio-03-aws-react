@@ -42,8 +42,8 @@ export default function ProfilePage() {
           });
           setGitHubUser({
             avatar_url: data.avatar_url,
-            name: data.name,
-            location: data.location,
+            name: data.name || "Nenhum nome fornecido",
+            location: data.location || "Nenhuma Localização fornecida",
             email: data.email,
             bio: data.bio,
             html_url: data.html_url,

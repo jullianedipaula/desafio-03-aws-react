@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 import LinkedinModal from "./LinkedinModal";
 
+interface GitHubUser {
+  avatar_url: string;
+  name: string;
+  location: string;
+  email: string | null;
+  bio: string | null;
+  html_url: string;
+}
+
 interface AboutIconProps {
   githubUser: GitHubUser | null;
   customText: string;

@@ -24,14 +24,16 @@ export default function Header() {
       const octokit = new Octokit({ auth: token });
 
       const fetchGitHubUser = async () => {
-        try {
-          const { data } = await octokit.users.getByUsername({ username });
-          setGitHubUser({
-            avatar_url: data.avatar_url,
-            name: data.name,
-          });
-        } catch (error) {
-          console.error("Erro ao buscar dados do GitHub:", error);
+        if (username) {
+          try {
+            const { data } = await octokit.users.getByUsername({ username });
+            setGitHubUser({
+              avatar_url: data.avatar_url,
+              name: data.name ?? "Unknown",
+            });
+          } catch (error) {
+            console.error("Erro ao buscar dados do GitHub:", error);
+          }
         }
       };
 

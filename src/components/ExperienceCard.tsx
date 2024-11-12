@@ -6,7 +6,7 @@ interface Experience {
   duration: string;
   description: string;
   tags: string[];
-  repositoryLink: string;
+  repositoryLink?: string;
 }
 
 interface ExperienceCardProps {

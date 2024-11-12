@@ -1,7 +1,15 @@
 import { useState } from "react";
 
+interface Experience {
+  title: string;
+  duration: string;
+  description: string;
+  tags: string[];
+  repositoryLink?: string;
+}
+
 interface ExperienceModalProps {
-  experience?: Experience;
+  experience?: Experience | null;
   onSave: (experience: Experience) => void;
   onClose: () => void;
 }

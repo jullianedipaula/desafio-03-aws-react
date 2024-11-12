@@ -6,7 +6,11 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-const ContactArea = ({ email }) => {
+interface ContactAreaProps {
+  email: string;
+}
+
+const ContactArea = ({ email }: ContactAreaProps) => {
   return (
     <div className="flex flex-col items-center justify-center text-white">
       <div className="flex items-center justify-center flex-col mt-0 text-center font-extrabold bg-dark_green w-full h-96">

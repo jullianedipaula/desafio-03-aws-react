@@ -10,11 +10,12 @@ interface Experience {
   duration: string;
   description: string;
   tags: string[];
-  repositoryLink: string;
+  repositoryLink?: string;
 }
 
 interface ExperiencesSectionProps {
   isEditing: boolean;
+  
 }
 
 const ExperiencesSection = ({ isEditing }: ExperiencesSectionProps) => {
@@ -116,7 +117,7 @@ const ExperiencesSection = ({ isEditing }: ExperiencesSectionProps) => {
                 </button>
               </div>
             ) : (
-              <ExperienceCard experience={experience} />
+              <ExperienceCard experience={experience} isEditing={false} />
             )}
           </div>
         ))}
